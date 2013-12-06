@@ -1,0 +1,19 @@
+CROSS_HOST="x86_64-w64-mingw32"
+inherit cross
+
+NAME="mingw64-x86_64-libsamplerate"
+VERSION=0.1.8
+RELEASE=1
+CATEGORY="Devel"
+SUMMARY="Sample rate converter library for Win64 toolchain"
+DESCRIPTION="libsamplerate is a Sample Rate Converter for audio. One example
+of where such a thing would be useful is converting audio from the CD sample
+rate of 44.1kHz to the 48kHz sample rate used by DAT players."
+DESCRIPTION="Sample rate converter library"
+HOMEPAGE="http://www.mega-nerd.com/SRC/"
+SRC_URI="http://www.mega-nerd.com/SRC/libsamplerate-${VERSION}.tar.gz"
+SRC_DIR="libsamplerate-${VERSION}"
+
+ACLOCAL_FLAGS="-I M4"
+
+MAKEOPTS+=" bin_PROGRAMS= html_DATA= "
